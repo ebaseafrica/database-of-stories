@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>eBASE Story Database</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>eBASE Story Database</h1>
+    <nav>
+      <select id="language-switcher">
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="sw">Kiswahili</option>
+      </select>
+    </nav>
+  </header>
+
+  <main>
+    <section id="story-submission">
+      <h2>Submit Your Story</h2>
+      <form id="story-form">
+        <input type="text" name="title" placeholder="Story Title" required />
+        <input type="text" name="author" placeholder="Author Name" required />
+        <select name="region">
+          <option value="Africa">Africa</option>
+          <option value="Asia">Asia</option>
+          <option value="Europe">Europe</option>
+          <option value="Americas">Americas</option>
+          <option value="Oceania">Oceania</option>
+        </select>
+        <textarea name="content" placeholder="Your story..." required></textarea>
+        <button type="submit">Submit Story</button>
+      </form>
+      <div id="submission-feedback" style="display:none;">Thank you for submitting your story!</div>
+    </section>
+
+    <section id="story-feed">
+      <h2>Latest Stories</h2>
+      <div id="stories-container"></div>
+    </section>
+
+    <section id="admin-panel">
+      <h2>Admin Panel</h2>
+      <p><strong>Moderation Queue</strong>: Approve or reject new stories.</p>
+      <p><strong>Edit Stories</strong>: Update or remove existing entries.</p>
+      <p><strong>Analytics</strong>: Track reads, languages used, and regions accessed.</p>
+    </section>
+
+    <section id="optional-features">
+      <h2>Coming Soon / Optional</h2>
+      <ul>
+        <li>🗺️ Story Map: Visual display of story origins</li>
+        <li>📆 Timeline View: For showcasing progress/process stories</li>
+        <li>🧠 AI Recommendations: Suggest similar stories automatically</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
